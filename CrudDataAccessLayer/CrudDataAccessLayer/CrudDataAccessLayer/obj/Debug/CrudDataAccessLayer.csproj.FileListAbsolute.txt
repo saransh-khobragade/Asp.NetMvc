@@ -1,0 +1,10 @@
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\CrudDataAccessLayer.dll.config
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\CrudDataAccessLayer.dll
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\CrudDataAccessLayer.pdb
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\EntityFramework.dll
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\EntityFramework.xml
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\obj\Debug\CrudDataAccessLayer.dll
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\obj\Debug\CrudDataAccessLayer.pdb
+c:\users\saransh\documents\visual studio 2015\Projects\CrudDataAccessLayer\CrudDataAccessLayer\obj\Debug\CrudDataAccessLayer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,87 @@
+create database Company 
+use Company 
+
+create table Employees(id int identity(1,1) primary key ,ename varchar(50),salary int,mgrid int)
+
+insert into Employees values(1,'Mohit',130000,0)
+insert into Employees values(2,'saransh',30000,1)
+insert into Employees values(3,'shubham',30000,1)
+insert into Employees values(4,'joe',6000,2)
+insert into Employees values(5,'sam',6000,2)
+
+
+create table Dept(id int primary key,dname varchar(30))
+
+insert into Dept values(1,'maths')
+insert into Dept values(2,'english')
+insert into Dept values(3,'civil')
+insert into Dept values(4,'env')
+insert into Dept values(5,'ed')
+
+
+CREATE PROCEDURE dbo.InsertEmployee
+  @EName nvarchar(15),
+  @Salary int,
+  @Mgrid int,
+  @id int out
+AS
+BEGIN
+	BEGIN TRY
+		INSERT INTO Employees VALUES(@EName,@Salary,@Mgrid)
+		Set @id=@@identity
+		RETURN 1
+	END TRY
+	BEGIN CATCH
+		RETURN -1
+	END CATCH
+END
+
+declare @outid int
+exec dbo.InsertEmployee 'mayank2', 23000, 2,@id=@outid output
+select @outid
+
+
+drop procedure dbo.InsertEmployee
+
+CREATE FUNCTION CountEmployee(@string varchar(100))
+RETURNS int
+AS
+BEGIN
+	
+        
+	RETURN (select count(*) from Employees where ename=@string)
+	
+	
+	
+END
+
+select dbo.CountEmployee('saransh')
+
+CREATE FUNCTION ShowEmployees()
+returns table 
+as
+	RETURN select * from Employees
+go
+
+select * from dbo.ShowEmployees()
+
+CREATE FUNCTION GetNextEmployeeId()
+RETURNS INT
+BEGIN
+	DECLARE @Id INT
+	SELECT @Id = MAX(id) FROM employees
+	SET @Id = @Id + 1
+	RETURN @Id
+END
+
+
+Create Function CheckEmployee(@name char(20))
+returns int
+Begin
+     declare @id int;
+     Select @id=id
+     From Employees
+     Where ename=@name;
+     return @id;
+end;
+select * from dbo.ShowEmployees()

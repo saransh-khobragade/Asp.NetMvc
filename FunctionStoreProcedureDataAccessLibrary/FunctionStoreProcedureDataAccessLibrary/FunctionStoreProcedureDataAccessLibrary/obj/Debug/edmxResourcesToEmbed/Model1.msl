@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CompanyModelStoreContainer" CdmEntityContainer="CompanyEntities">
+    <EntitySetMapping Name="Depts">
+      <EntityTypeMapping TypeName="CompanyModel.Dept">
+        <MappingFragment StoreEntitySet="Dept">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dname" ColumnName="dname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="CompanyModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="mgrid" ColumnName="mgrid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="CompanyModel.Store.ShowEmployees" FunctionImportName="ShowEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CompanyModel.ShowEmployees_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="mgrid" ColumnName="mgrid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Displaydata" FunctionName="CompanyModel.Store.Displaydata">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CompanyModel.Displaydata_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ename" ColumnName="ename" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="mgrid" ColumnName="mgrid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertEmployee" FunctionName="CompanyModel.Store.InsertEmployee" />
+    <FunctionImportMapping FunctionImportName="printall" FunctionName="CompanyModel.Store.printall" />
+  </EntityContainerMapping>
+</Mapping>

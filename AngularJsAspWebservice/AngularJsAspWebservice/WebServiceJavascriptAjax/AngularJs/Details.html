@@ -1,0 +1,16 @@
+Search by <input type="text" ng-model="search">
+<table border=1>
+  <tr>
+	<td>ID</td>
+	<td>Employee name</td>
+	<td>Salary</td>
+    <td>Manager ID</td>
+      
+  </tr>
+  <tr ng-repeat="x in details | filter:search">
+	<td>{{ x.id }}</td>
+	<td>{{ x.ename }}</td>
+	<td>{{ x.salary }}</td>
+	<td>{{ x.mgrid }}</td>
+  </tr>
+</table>
